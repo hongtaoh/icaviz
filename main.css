@@ -1,0 +1,97 @@
+body {
+  line-height: 1.4;
+  font-size: 20px;
+}
+h1{font-size: 200%;
+   text-align: center;
+}
+h2{font-size: 150%}
+h3{font-size: 120%}
+
+header{
+  margin-top:30px;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+}
+
+#sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top:0;
+  left:0;
+  overflow-x: hidden;
+  background-image: url("32vis.png");
+  background-repeat: no-repeat;
+  background-size: 130px;
+  background-position: 0px 30px; 
+  text-align: left;
+  line-height: 40px;
+}
+
+
+a.anchor {
+  display: block;
+  position: relative;
+  visibility: hidden;
+}
+
+#sidebar a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  padding-right: 73px;
+  text-align: right;
+}
+
+#wrapper {
+	margin-left: 180px;
+}
+
+#wrapper {
+}
+#CFR-viz {
+}
+#chart {
+}
+#trend-viz {
+}
+#trajectory-viz{
+}
+#sankey-viz{
+}
+#co-occur-viz{
+}
+
+.viewof {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.chart {
+  max-height: 85%; 
+  max-width: 90%;
+  font-size: 21px;
+}
+
+.leftMargin {
+  margin-left: 10px;
+}
+
+#explanation {
+  width: 90%
+}
