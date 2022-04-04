@@ -29,17 +29,17 @@
      <p class='smallfont'>(In terms of "Timeseries", if True, it will show year by year; if False, it will show the aggregated result (1990-2021).)</p>
 
       <div class="row">   
-         <div id="timeseries" class="viewof column"></div>
-         <div id="level" class="viewof column"></div>
+         <div id="timeseriesCO" class="viewof column"></div>
+         <div id="levelCO" class="viewof column"></div>
       </div>
 
       <div class="row">
-         <div id="playSpeedCo" class="viewof column"></div> 
-         <div id="yearRange" class="viewof column"></div>
+         <div id="playSpeedCO" class="viewof column"></div> 
+         <div id="yearRangeCO" class="viewof column"></div>
       </div>
 
       <div class="row">
-         <div id="currYear" class="viewof column"></div> 
+         <div id="currYearCO" class="viewof column"></div> 
          <div id="cutoff" class="viewof column"></div> 
       </div>
 
@@ -58,11 +58,11 @@
 
       import notebook from "https://api.observablehq.com/@hongtaoh/ieee-vis-paper-concepts-cooccurance-chord-diagram.js?v=3"; 
       const renders = {
-        "viewof timeseries": "#timeseries",
-        "viewof level": "#level",
-        "viewof playSpeedCo": "#playSpeedCo",
-        "viewof yearRange": "#yearRange",
-        "viewof currYear": "#currYear",
+        "viewof timeseriesCO": "#timeseriesCO",
+        "viewof levelCO": "#levelCO",
+        "viewof playSpeedCO": "#playSpeedCO",
+        "viewof yearRangeCO": "#yearRangeCO",
+        "viewof currYearCO": "#currYearCO",
         "viewof cutoff": "#cutoff",
         // "year": "#year",
         "chartCo": "#chartCo",
