@@ -95,3 +95,7 @@ a.anchor {
 #explanation {
   width: 90%
 }
+
+.smallfont {
+  font-size: 14px;
+}

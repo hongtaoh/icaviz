@@ -26,9 +26,10 @@
       <h2>Citation flows based on fields of study</h2>
 
       <p>If you don't know what to do, simply click the "Play" button and you'll see :)</p>
+      <p class='smallfont'>In terms of "Timeseries", if True, it will show year by year; if False, it will show the aggregated result (1990-2021).
 
       <div class="row">   
-         <div id="ts_or_not" class="viewof column"></div>
+         <div id="timeseries" class="viewof column"></div>
          <div id="level" class="viewof column"></div>
       </div>
 
@@ -69,7 +70,7 @@
       import notebookSankey from "https://api.observablehq.com/@hongtaoh/sankey-diagram-of-citation-flows.js?v=3";
       
       const renderSankey = {
-        "viewof ts_or_not": "#ts_or_not",
+        "viewof timeseries": "#timeseries",
         "viewof level": "#level",
         "viewof source": "#source",
         "viewof rankCutoff": "#rankCutoff",
