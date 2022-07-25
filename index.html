@@ -10,7 +10,8 @@
     <aside>
       <div id="sidebar">
           <div style="margin-top: 100px"></div>
-            <a href="index.html">Citation flows</a>
+            <a href="index.html">README</a>
+            <a href="citation-flows.html">Citation flows</a>
             <a href="co-occur.html">Co-occurrence</a>
             </div> 
           </div>
@@ -21,82 +22,20 @@
       <h1>32 Years of IEEE VIS</h1>
     </header>
 
-    <div id="sankey-viz">
-      <!-- <a class="anchor" name="h2fatality"></a> -->
-      <h2>Citation flows based on fields of study</h2>
-      <h4>(If you see "Runtime Error", please just refresh your browser)</h4>
-
-      <p>If you don't know what to do, simply click the "Play" button and you'll see :)</p>
-      <p class='smallfont'>(In terms of "Timeseries", if True, it will show year by year; if False, it will show the aggregated result (1990-2021).)</p>
-
-      <div class="row">   
-         <div id="timeseries" class="viewof column"></div>
-         <div id="level" class="viewof column"></div>
-      </div>
-
-      <div class="row">
-         <div id="source" class="viewof column"></div>
-         <div id="rankCutoff" class="viewof column"></div> 
-      </div>
-      <div class="row">
-         <div id="frameWidth" class="viewof column"></div>
-         <div id="linkColor" class="viewof column"></div> 
-      </div>
-      <div class="row">
-         <div id="nodeAlign" class="viewof column"></div>
-         <div id="playSpeedSankey" class="viewof column"></div> 
-      </div>
-      <div class="row">
-         <div id="currYear" class="viewof column"></div> 
-<!--          <div id="yearRange" class="viewof column"></div> -->
-      </div>
-      <div class="row">
-         <div id="fromWhere" class="viewof column"></div>
-         <div id="year" class="viewof column"></div> 
-      </div>
-
-      <div id="tsDisplay"></div>
-
-      <div id="chartSankey" class="chart"></div>
-      
-      <div id="explanation">
-          <p>This visualization shows the citation flows based on fields of study. You can select the source and specify the time range.</p>
-      </div>
-    </div>
+    <p>This website hosts interactive visualizations, data, source codes, and supplementary material for the paper of <strong>Thirty-two years of IEEE Vis: Authors, Fields of Study and Citations</strong>.</p>
+    <p>A more comprehensive description of this project is available at <a href="https://github.com/hongtaoh/32vis">https://github.com/hongtaoh/32vis</a>.</p>
+    <h2 id="interactive-visualizations">Interactive visualizations</h2>
+    <ul>
+    <li><p><a href="file:///Users/hongtaoh/Desktop/github/32vis-viz/co-occur.html">Citation flows</a></p></li>
+    <li><p><a href="file:///Users/hongtaoh/Desktop/github/32vis-viz/co-occur.html">Concept co-occurences</a></p></li>
+    <li><p><a href="https://observablehq.com/@hongtaoh/ieee-vis-paper-concepts-cooccurance-chord-diagram">Topic trends</a></p></li>
+    <li><p><a href="https://observablehq.com/@hongtaoh/ieee-vis-paper-concepts-cooccurance-chord-diagram">Cross-country collaborations</a></p></li>
+    </ul>
+    <h2 id="data">Data</h2>
+    <p>The full dataset is on <a href="https://osf.io/zkvjm/">OSF</a> and also on <a href="https://github.com/hongtaoh/32vis">GitHub repository</a>.</p>
+    <p>We’ve also published the most important datasets, i.e., about VIS papers and authors, on Google Sheets.</p>
   </div>
 
-  	<script type="module">
-      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-
-      import notebookSankey from "https://api.observablehq.com/@hongtaoh/sankey-diagram-of-citation-flows.js?v=3";
-      
-      const renderSankey = {
-        "viewof timeseries": "#timeseries",
-        "viewof level": "#level",
-        "viewof source": "#source",
-        "viewof rankCutoff": "#rankCutoff",
-        "viewof frameWidth": "#frameWidth",
-        "viewof linkColor": "#linkColor",
-        "viewof nodeAlign": "#nodeAlign",
-        "viewof playSpeedSankey": "#playSpeedSankey",
-        // "viewof yearRange": "#yearRange",
-        "viewof currYear": "#currYear",
-        "fromWhere": "#fromWhere",
-        "year": "#year",
-        "tsDisplay": "#tsDisplay",
-        "chartSankey": "#chartSankey",
-      }
-
-      const runtimeSankey = new Runtime();
-      const mainSankey = runtimeSankey.module(notebookSankey, name => {
-         const selector = renderSankey[name];
-          if (selector) {
-              return new Inspector(document.querySelector(selector));
-          } else {
-              return true;
-          }
-      });
-
-  	</script>
+  	
   </body>
 </html>
