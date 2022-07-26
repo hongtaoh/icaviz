@@ -43,11 +43,34 @@ header{
   line-height: 40px;
 }
 
+.button {
+  background-color: #008CBA;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
 a.anchor {
   display: block;
   position: relative;
   visibility: hidden;
+}
+
+.button-a {
+  text-decoration: none;
+  color: white;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid orange;
+  padding: 10px;
 }
 
 #sidebar a {
