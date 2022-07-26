@@ -45,6 +45,7 @@ header{
 
 .button {
   background-color: #008CBA;
+  color: white;
   border: none;
   padding: 15px 32px;
   text-align: center;
@@ -63,7 +64,6 @@ a.anchor {
 
 .button-a {
   text-decoration: none;
-  color: white;
 }
 
 .center {
