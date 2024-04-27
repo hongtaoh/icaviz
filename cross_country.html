@@ -15,8 +15,7 @@
             <a href="gender.html">Gender</a>
             <a href="cross_gender.html">Cross Gender</a>
             <a href="cross_country.html">Cross Country</a>
-            </div> 
-          </div>
+        </div> 
     </aside>
 
    <div id="wrapper">
@@ -26,20 +25,14 @@
 
     <div id="sankey-viz">
       <!-- <a class="anchor" name="h2fatality"></a> -->
-      <h2>Race distribution</h2>
-      <h4>(If you see "Runtime Error", please just refresh your browser)</h4>
+      <h2>Cross Country Collaboration</h2>
 
-
-      <div class="row">   
-         <div id="cntry" class="viewof column"></div>
-      </div>
-
-      <div id="raceplot" class="chart"></div>
+      <div id="crosscountrychart" class="chart"></div>
       
       <div id="explanation">
-          <p>This visualization shows the distribution of race in the country/region you choose.</p>
+          <p>This visualization shows the cross-country collaboration.</p>
 
-          <p>Source code of this visualization: <a href="https://observablehq.com/@hongtaoh/race-by-country">https://observablehq.com/@hongtaoh/race-by-country</a></p>
+          <p>Source code of this visualization: <a href="https://observablehq.com/@hongtaoh/cross-country-collaboration-from-first-authors-chord-diag">https://observablehq.com/@hongtaoh/cross-country-collaboration-from-first-authors-chord-diag</a></p>
       </div>
     </div>
   </div>
@@ -47,16 +40,15 @@
   	<script type="module">
       import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 
-      import notebookrace from "https://api.observablehq.com/@hongtaoh/race-by-country.js?v=3";
+      import notebookcrosscountry from "https://observablehq.com/@hongtaoh/cross-country-collaboration-from-first-authors-chord-diag.js?v=3";
       
-      const renderRace = {
-        "viewof cntry": "#cntry",
-        "raceplot": "#raceplot",
+      const renderCrossCountry = {
+        "crosscountrychart": "#crosscountrychart",
       }
 
       const runtimeSankey = new Runtime();
-      const mainSankey = runtimeSankey.module(notebookrace, name => {
-         const selector = renderRace[name];
+      const mainSankey = runtimeSankey.module(notebookcrosscountry, name => {
+         const selector = renderCrossCountry[name];
           if (selector) {
               return new Inspector(document.querySelector(selector));
           } else {

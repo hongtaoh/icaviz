@@ -26,20 +26,14 @@
 
     <div id="sankey-viz">
       <!-- <a class="anchor" name="h2fatality"></a> -->
-      <h2>Race distribution</h2>
-      <h4>(If you see "Runtime Error", please just refresh your browser)</h4>
+      <h2>Cross Gender Collaboration</h2>
 
-
-      <div class="row">   
-         <div id="cntry" class="viewof column"></div>
-      </div>
-
-      <div id="raceplot" class="chart"></div>
+      <div id="crossgenderchart" class="chart"></div>
       
       <div id="explanation">
-          <p>This visualization shows the distribution of race in the country/region you choose.</p>
+          <p>This visualization shows the cross-gender collaboration.</p>
 
-          <p>Source code of this visualization: <a href="https://observablehq.com/@hongtaoh/race-by-country">https://observablehq.com/@hongtaoh/race-by-country</a></p>
+          <p>Source code of this visualization: <a href="https://api.observablehq.com/@hongtaoh/cross-gender-and-race-collaboration-from-first-authors-cho">https://api.observablehq.com/@hongtaoh/cross-gender-and-race-collaboration-from-first-authors-cho</a></p>
       </div>
     </div>
   </div>
@@ -47,16 +41,15 @@
   	<script type="module">
       import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 
-      import notebookrace from "https://api.observablehq.com/@hongtaoh/race-by-country.js?v=3";
+      import notebookcrossgender from "https://api.observablehq.com/@hongtaoh/cross-gender-and-race-collaboration-from-first-authors-cho.js?v=3";
       
-      const renderRace = {
-        "viewof cntry": "#cntry",
-        "raceplot": "#raceplot",
+      const renderCrossGender = {
+        "crossgenderchart": "#crossgenderchart",
       }
 
       const runtimeSankey = new Runtime();
-      const mainSankey = runtimeSankey.module(notebookrace, name => {
-         const selector = renderRace[name];
+      const mainSankey = runtimeSankey.module(notebookcrossgender, name => {
+         const selector = renderCrossGender[name];
           if (selector) {
               return new Inspector(document.querySelector(selector));
           } else {
